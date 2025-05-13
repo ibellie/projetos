@@ -1,0 +1,427 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.largura-maxima {
+  max-width: 1420px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@font-face {
+  font-family: 'arsenica';
+  src: url('fonts/arsenica/Arsenica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'billing';
+  src: url('fonts\billing_lottre\Billing Lottre.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body{
+    background-color: pink;
+    color: #ffffff;
+
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+html{
+    font-family: inter, arial;
+    font-weight: 500;
+    font-size: large;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+
+}
+
+nav{
+    width: 100%;
+    padding: 1.5rem 10rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background-color:#ac5270;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    color:#ffffff;
+    font-family: 'arsenica', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+
+    opacity: 1;
+    transition: color 0.5s ease;
+
+}
+
+.logo:hover {
+    color: #eeadc3;
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+li{
+    opacity: 1;
+    transition: color 0.5s ease;
+}
+
+li:hover {
+    color: #eeadc3;
+}
+
+.git{
+    font-weight: 600;
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: color 0.5s ease;
+
+}
+
+.git:hover {
+    color: #eeadc3;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.destaque{
+
+    font-size: 1rem; 
+    text-transform: uppercase;
+    
+}
+
+.claro{
+    color: #ac5270;
+}
+
+.escuro{
+        color: #eeadc3;
+}
+
+h1{
+    font-family: 'billing';
+    font-size: 3.5rem;
+    font-weight: 800;
+
+    padding: 0%;
+    margin: 0%;
+
+}
+
+hr{
+    border-color: #eeadc3;
+    margin: 1.2rem 0rem;
+
+}
+
+.hero-sub{
+
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.back {
+    background-color: #b67389;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 600px;
+
+}
+
+
+.hero{
+    
+    padding-top: 200px;
+
+    color: rgb(255, 255, 255);
+    background-color: #b67389;
+    max-width: 1420px;
+
+    height: 600px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+
+    padding: 0 1rem;
+    margin: auto;
+
+    overflow: clip;
+
+}
+
+.hero1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.hero-img{
+    max-width: 60%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    position: relative;
+
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.loop-container{
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    animation: scroolloop 20s linear infinite;
+    will-change: transform;
+}
+
+.column img{
+    width: 190px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px !important; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+
+.column:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroolloop {
+     0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.delay{
+    animation-delay: -5s;
+}
+
+.bot{
+    width: 100%;
+    max-width: 1420px;
+
+    margin: 2rem auto;
+    transform: translate("0, -50%");
+
+}
+
+button{
+    border: none;
+
+    border-radius: 0.5rem;
+    background-color: white;
+
+    width:  3rem;
+    height: 3rem;
+
+    opacity: 1;
+    transition: background-color 0.6s ease;
+
+}
+
+button:hover {
+    background-color:rgb(175, 83, 114);
+
+}
+
+
+button img{
+    width:  2.5rem;
+    height: 2.5rem;
+
+}
+
+.high{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1420px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+.sub{
+    font-family: 'billing';
+    font-style: oblique;
+
+}
+
+.conteiner{
+    padding: 2rem 0rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    padding: 2rem 0;
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.card{
+    background-color: #b67389;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-basis: 48%;
+    max-width: 48%;
+}
+
+.cabe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+
+    margin: 0%;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+}
+
+.titu-sub{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+.youtube {
+    width: 3rem;
+    height: 3rem;
+    padding: 5px 5px 3px 0px;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+}
+
+.youtube:hover {
+    opacity: 0.5;
+}
+
+.video{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+
+  opacity: 100%;
+
+  margin: 0rem 0rem 1rem 0rem;
+
+}
+
+.video:hover {
+
+  opacity: 80%;
+
+}
+
+footer{
+    width: 100vw;
+    background-color: #ffffff;
+    color:#b67389;
+
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .conteiner {
+    grid-template-columns: 1fr;
+
+    }
+
+  body {
+    padding: 0 1rem;
+  }
+
+  nav, .bot, .high {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .sub {
+    font-size: 2rem;
+  }
+}
