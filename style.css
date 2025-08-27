@@ -1,0 +1,327 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+
+    width: 100%;
+    margin: auto;
+    padding: 2rem 2rem;
+
+    background-color: palevioletred;
+}
+
+.logo{
+    color: white;
+    display: inline-block;
+
+    font-size: 30px;
+    font-weight: 900;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: row;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+}
+
+li{
+    padding: 0rem 1.5rem;
+}
+
+a{
+    color: pink;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+
+    background-color: white;
+    border-radius: 20px;
+
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover{
+    color: white;
+    background-color: pink;
+    transform: translateY(-5px);
+}
+
+#menu{
+    display: none;
+}
+
+.icon{
+    display: none;
+    position: relative;
+    font-size: 1rem;
+    color: white;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.side-menu{
+    position: fixed;
+
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100vh;
+    padding: 2rem 1rem;
+    z-index: 1001;
+
+    background-color: pink;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+
+    transition: left 0.3s ease;
+}
+
+.icon::before {
+    content: "☰";
+    font-size: 2rem; 
+    color: white;
+
+    transition: all 0.4s ease-in-out;
+}
+
+#menu:checked + nav .icon::before {
+    content: "✖";
+    color: white;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    max-width: 1100px;
+
+}
+
+.lili{
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    border-radius: 30px;
+
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+}
+
+.lili:hover{
+    opacity: 0.8;
+    transform: rotate(2deg);
+
+}
+
+h1{
+    font-size: 35px;
+    color: pink;
+    padding: 1rem 0rem;
+    transition: all 0.4s ease-in-out;
+}
+
+h1:hover{
+    color: palevioletred;
+}
+
+.texto{
+    margin: 0rem 2rem;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 80%;
+    margin: auto;
+    
+}
+
+h2{
+    font-size: 25px;
+    color: rgb(202, 95, 113);
+    padding: 1rem 0rem;
+    transition: all 0.4s ease-in-out;
+}
+
+h2:hover{
+    color: rgb(141, 17, 58) !important;
+}
+
+.sub{
+    padding: 0rem 2rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: palevioletred;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transition: left 0.3s ease;
+    z-index: 1001;
+  }
+
+  #menu:checked ~ .side-menu {
+    left: 0;
+  }
+
+  .side-menu ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+
+  .overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  #menu:checked ~ .overlay {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+    li {
+        text-align: center;
+        margin: 0px;
+        padding: 0;
+    }
+
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .lili{
+        width: 500px;
+        border-radius: 30px;
+        margin: 1rem;
+    }
+
+    .texto {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .cont {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+
+    p {
+        font-size: 18px;
+    }
+
+
+
+@media (min-width: 1024px) {
+    .hero {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .cont {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .texto {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
